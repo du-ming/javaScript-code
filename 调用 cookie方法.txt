@@ -1,0 +1,33 @@
+appVersion=38&model=vivo%2BX5Max%2B&elapsedtime=770990982&cs=0&imei=867702027978405&av=19&version=1.0.0&logged=true&token=NzY1YjZiNjc2M2EyOTM5MGJkN2IuNTI1OTI3NS4xNDUzMjgzNDIyNzY5&openid=880461d865bd98c5&uuid=test&username=test&sign=2%7C1248152093
+
+
+
+function addSign(obj){
+		if(obj==null){
+			obj={};
+		}
+		var status=$.cookie("status");
+		obj.logged=(status=="1");
+		obj.token=$.cookie("r");
+		obj.openid=$.cookie("n");
+		obj.uuid=$.cookie("q");
+		obj.username=$.cookie("p");
+		var sign=$.cookie("sign");
+		if(!obj.sign&&sign){
+			obj.sign=sign;
+		}
+		return obj;
+	}
+	function addOtherMsg(obj){
+		if(obj==null){
+			obj={};
+		}
+		obj.appVersion=$.cookie("app_version");
+		obj.model=$.cookie("model");
+		obj.elapsedtime=$.cookie("elapsedtime");
+		obj.cs=$.cookie("cs");
+		obj.imei=$.cookie("imei");
+		obj.av = $.cookie("av");
+		return obj;
+	}
+

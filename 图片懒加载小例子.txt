@@ -1,0 +1,12 @@
+  <img data-src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_81d09391.png" alt="logo"/>
+    <br/>
+    <button class="showImg">
+        µ„Œ“œ‘ æÕº∆¨
+    </button>
+
+    <script type="text/javascript">
+        $(".showImg").click(function() {
+            var show = $(".img > img");
+            show.attr("src", show.attr("data-src"));
+        });
+    </script>
